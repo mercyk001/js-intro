@@ -38,6 +38,9 @@ getDayOfWeek(15);
 
 
 // 2. Using the ternary operator to achieve the same output
+
+const prompt = require('prompt-sync')();
+
 function dayOfWeek(day) {
     const result = (day === 1) ? "Sunday" :
                    (day === 2) ? "Monday" :
@@ -49,6 +52,10 @@ function dayOfWeek(day) {
                    "Out of bounds exception (1-7)";
     console.log(result);
 }
+
+const dayNumber = parseInt(prompt("Enter a number between 1 and 7: "), 10);
+dayOfWeek(dayNumber);
+
 
 dayOfWeek(5);
 dayOfWeek(15);
